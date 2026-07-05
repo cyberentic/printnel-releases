@@ -1,0 +1,54 @@
+name: Release sender app
+
+# Manual: (in the PUBLIC printnel-releases repo) Actions → "Release sender app" → Run.
+# Builds the SIGNED Windows + macOS installers from the private source and
+# publishes them here as a Release with an auto-update feed (latest.json).
+# The installed app reads that feed on launch and offers "Update".
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write # publish the Release in this (public) repo
+
+jobs:
+  release:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout private source
+        uses: actions/checkout@v4
+        with:
+          repository: cyberentic/Printnel
+          ssh-key: ${{ secrets.SOURCE_DEPLOY_KEY }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - uses: dtolnay/rust-toolchain@stable
+
+      - uses: swatinem/rust-cache@v2
+        with:
+          workspaces: sender/src-tauri
+
+      - name: Install frontend dependencies
+        working-directory: sender
+        run: npm ci
+
+      - name: Build, sign & publish
+        uses: tauri-apps/tauri-action@v0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
+          TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY_PASSWORD }}
+        with:
+          projectPath: sender
+          tagName: sender-v__VERSION__
+          releaseName: "Printnel Sender v__VERSION__"
+          releaseBody: "Your app will offer this update automatically on next launch."
+          releaseDraft: false
+          prerelease: false
+          includeUpdaterJson: true
