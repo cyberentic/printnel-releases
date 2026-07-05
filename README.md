@@ -1,11 +1,29 @@
-# Printnel Sender — downloads & updates
+<div align="center">
 
-Public home for the **Printnel sender** desktop app: the installers and the
-auto-update feed. **No source code lives here** — the app is built from a
-private repository.
+# 🖨️ Printnel
 
-- **Windows / Mac installers:** see the latest [Release](../../releases/latest).
-- **Auto-update:** the installed app checks this repo on launch and offers new
-  versions automatically. You install once; after that it updates itself.
+### Send a file. We print it. A rider brings it to your door.
 
-Publish a new version: **Actions → "Release sender app" → Run**.
+<br>
+
+[![Download for Windows](https://img.shields.io/badge/Download-Windows-6b4eff?style=for-the-badge&logo=windows&logoColor=white)](../../releases/latest)
+&nbsp;&nbsp;
+[![Download for Mac](https://img.shields.io/badge/Download-Mac-1d1d1f?style=for-the-badge&logo=apple&logoColor=white)](../../releases/latest)
+
+<br>
+
+**Install once — after that it updates itself.** ✨
+
+</div>
+
+<br>
+
+<details>
+<summary>🛠️ For the team — publish a new version</summary>
+
+<br>
+
+**Actions → Release sender app → Run.**
+It builds the new version, posts it here, and everyone's app updates on its own.
+
+</details>
