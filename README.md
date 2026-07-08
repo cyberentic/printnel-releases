@@ -6,9 +6,15 @@
 
 <br>
 
-[![Download for Windows](https://img.shields.io/badge/Download-Windows-6b4eff?style=for-the-badge&logo=windows&logoColor=white)](../../releases/latest)
+**Customer app** (send files to print)
+[![Download for Windows](https://img.shields.io/badge/Customer_app-Windows-6b4eff?style=for-the-badge&logo=windows&logoColor=white)](../../releases/latest)
 &nbsp;&nbsp;
-[![Download for Mac](https://img.shields.io/badge/Download-Mac-1d1d1f?style=for-the-badge&logo=apple&logoColor=white)](../../releases/latest)
+[![Download for Mac](https://img.shields.io/badge/Customer_app-Mac-1d1d1f?style=for-the-badge&logo=apple&logoColor=white)](../../releases/latest)
+
+<br>
+
+**Partner app** (for print shops — get orders, print, get paid)
+[![Download Partner for Windows](https://img.shields.io/badge/Partner_app-Windows-ff5c8a?style=for-the-badge&logo=windows&logoColor=white)](../../releases?q=partner&expanded=true)
 
 <br>
 
@@ -23,7 +29,9 @@
 
 <br>
 
-**Actions → Release sender app → Run.**
-It builds the new version, posts it here, and everyone's app updates on its own.
+- **Customer app:** Actions → **Release sender app** → Run.
+- **Partner app:** Actions → **Release partner app** → Run.
+
+Each builds the new version, posts it here, and every installed app updates on its own.
 
 </details>

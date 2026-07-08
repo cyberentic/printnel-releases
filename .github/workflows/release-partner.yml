@@ -1,0 +1,76 @@
+name: Release partner app
+
+# Manual: (in the PUBLIC printnel-releases repo) Actions → "Release partner app" → Run.
+# Publishes the SIGNED Windows installer for the print-shop app INTO THIS SAME repo, as a
+# *prerelease* (so it never becomes the repo's "latest" and can't disturb the customer app),
+# then writes a stable feed file `partner-latest.json` on main that the Partner app reads.
+#
+# One repo, one signing key for both apps — no extra repo, no extra key.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout this public repo (to commit the feed)
+        uses: actions/checkout@v4
+
+      - name: Checkout private source
+        uses: actions/checkout@v4
+        with:
+          repository: cyberentic/Printnel
+          ssh-key: ${{ secrets.SOURCE_DEPLOY_KEY }}
+          path: source
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - uses: dtolnay/rust-toolchain@stable
+
+      - uses: swatinem/rust-cache@v2
+        with:
+          workspaces: source/partner/src-tauri
+
+      - name: Install frontend dependencies
+        working-directory: source/partner
+        run: npm ci
+
+      - name: Build, sign & publish (prerelease)
+        id: tauri
+        uses: tauri-apps/tauri-action@v0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Same signing key as the customer app — both apps share one key.
+          TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
+          TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY_PASSWORD }}
+          # Set repo Variable VITE_API_BASE to your live API once deployed; empty = localhost pilot.
+          VITE_API_BASE: ${{ vars.VITE_API_BASE }}
+        with:
+          projectPath: source/partner
+          tagName: partner-v__VERSION__
+          releaseName: "Printnel Partner v__VERSION__"
+          releaseBody: "The Partner app updates itself on next launch."
+          releaseDraft: false
+          prerelease: true
+          includeUpdaterJson: true
+
+      - name: Publish stable partner update feed
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          rid="${{ steps.tauri.outputs.releaseId }}"
+          url=$(gh api "repos/${{ github.repository }}/releases/${rid}/assets" \
+                --jq '.[] | select(.name=="latest.json") | .url')
+          curl -sL -H "Authorization: token ${GH_TOKEN}" -H "Accept: application/octet-stream" \
+               "$url" -o partner-latest.json
+          git config user.name "printnel-release-bot"
+          git config user.email "release@users.noreply.github.com"
+          git add partner-latest.json
+          git commit -m "partner update feed ($(node -p "require('./source/partner/src-tauri/tauri.conf.json').version"))" || echo "no change"
+          git push
