@@ -1,15 +1,15 @@
 {
-  "version": "0.3.0",
+  "version": "0.4.0",
   "notes": "The Partner app updates itself on next launch.",
-  "pub_date": "2026-07-13T14:30:32.364Z",
+  "pub_date": "2026-07-16T20:27:55.810Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRYjZkZU44QUxJcDFFWUVzeHFWUFRLWFA1czlyL0UrRlJ0U0lCZndMUmRZZElBMUUxYkljNk9NYWJkQ2lUeFU3ajNJOGtNcWFzQ2h2TlJSUjd6dTA2VFM3eGUwRzJkckFBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzOTUzMDMwCWZpbGU6UHJpbnRuZWwgUGFydG5lcl8wLjMuMF94NjQtc2V0dXAuZXhlCkJFZjYraVQ2SUgvS3RwUVozL0d1Tlo2WEdvN2NkeG55amh4d3pFTkZtQlJyTUJNQWF6aFVTZi9henJ0d1hoZHkvV29rclRKV2dmV2ZUaHNWdlp5R0JBPT0K",
-      "url": "https://github.com/cyberentic/printnel-releases/releases/download/partner-v0.3.0/Printnel.Partner_0.3.0_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRYjZkZU44QUxJcDJ5Tmc1djBCWXpiYkJoSUluTk5yU2w2SjdkbGNMQ2NUd2RGR25DcUxtV3l6eFA2V3NpWFRnbVVhLzRCcFZHay9QU2dvcStsNUFlNUhCanNDSlFOZ3drPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0MjMzNjczCWZpbGU6UHJpbnRuZWwgUGFydG5lcl8wLjQuMF94NjQtc2V0dXAuZXhlCnZhRkx2YWI2RkNFcEFKOVdPcTdDZXNpeVp2ZUJWUjVmTHBMOE9xV3l0TTFtU1R0VkNhOE41N3ZSblh2bnFxWERnUGcvVkFWaW9zRThJbnFJdGF4VkF3PT0K",
+      "url": "https://github.com/cyberentic/printnel-releases/releases/download/partner-v0.4.0/Printnel.Partner_0.4.0_x64-setup.exe"
     },
     "windows-x86_64-nsis": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRYjZkZU44QUxJcDFFWUVzeHFWUFRLWFA1czlyL0UrRlJ0U0lCZndMUmRZZElBMUUxYkljNk9NYWJkQ2lUeFU3ajNJOGtNcWFzQ2h2TlJSUjd6dTA2VFM3eGUwRzJkckFBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzOTUzMDMwCWZpbGU6UHJpbnRuZWwgUGFydG5lcl8wLjMuMF94NjQtc2V0dXAuZXhlCkJFZjYraVQ2SUgvS3RwUVozL0d1Tlo2WEdvN2NkeG55amh4d3pFTkZtQlJyTUJNQWF6aFVTZi9henJ0d1hoZHkvV29rclRKV2dmV2ZUaHNWdlp5R0JBPT0K",
-      "url": "https://github.com/cyberentic/printnel-releases/releases/download/partner-v0.3.0/Printnel.Partner_0.3.0_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRYjZkZU44QUxJcDJ5Tmc1djBCWXpiYkJoSUluTk5yU2w2SjdkbGNMQ2NUd2RGR25DcUxtV3l6eFA2V3NpWFRnbVVhLzRCcFZHay9QU2dvcStsNUFlNUhCanNDSlFOZ3drPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0MjMzNjczCWZpbGU6UHJpbnRuZWwgUGFydG5lcl8wLjQuMF94NjQtc2V0dXAuZXhlCnZhRkx2YWI2RkNFcEFKOVdPcTdDZXNpeVp2ZUJWUjVmTHBMOE9xV3l0TTFtU1R0VkNhOE41N3ZSblh2bnFxWERnUGcvVkFWaW9zRThJbnFJdGF4VkF3PT0K",
+      "url": "https://github.com/cyberentic/printnel-releases/releases/download/partner-v0.4.0/Printnel.Partner_0.4.0_x64-setup.exe"
     }
   }
 }
