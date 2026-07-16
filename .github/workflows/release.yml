@@ -34,8 +34,10 @@ jobs:
         with:
           workspaces: sender/src-tauri
 
+      # npm workspaces: install once from the repo root (single root package-lock.json).
+      # tauri-action's beforeBuildCommand (npm run build) still runs in sender/ and finds vite on
+      # the hoisted node_modules/.bin via ancestor PATH.
       - name: Install frontend dependencies
-        working-directory: sender
         run: npm ci
 
       - name: Build, sign & publish
