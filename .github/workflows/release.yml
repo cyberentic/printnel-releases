@@ -46,6 +46,23 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
           TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY_PASSWORD }}
+          # WITHOUT THESE TWO, EVERY INSTALLER SHIPS WITH NO GOOGLE AND NO EMAIL LOGIN.
+          # `src/supabase.ts` builds its client from these at BUILD time and exports
+          # `googleLoginEnabled = !!supabase`. The keys live only in the gitignored `.env`, so CI
+          # checked out the source, found no keys, and the app correctly concluded Google could not
+          # work and hid the door — "no dead buttons". Every release up to 0.7.0 / 0.4.1 was built
+          # blind this way, and it looked like a UI bug for weeks. The anon key is public by design
+          # (it already ships inside the installer; RLS is what protects the data).
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+          # Email needs an SMTP sender in Supabase too. Unset = on (the code tests `!== "off"`);
+          # set repo Variable VITE_EMAIL_LOGIN to "off" to hide that door without a code change.
+          VITE_EMAIL_LOGIN: ${{ vars.VITE_EMAIL_LOGIN }}
+          # Set repo Variable VITE_API_BASE to your live API once deployed; empty = localhost pilot.
+          # The shop workflow always had this hook; this one never did, so the customer app could not
+          # have been pointed at a server even after one exists. Same class of bug as the keys above:
+          # CI building blind. No effect today — empty falls back to the same localhost as now.
+          VITE_API_BASE: ${{ vars.VITE_API_BASE }}
         with:
           projectPath: sender
           tagName: sender-v__VERSION__
