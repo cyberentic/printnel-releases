@@ -107,4 +107,8 @@ jobs:
           git config user.email "release@users.noreply.github.com"
           git add sender-latest.json
           git commit -m "sender update feed (${ver})" || echo "no change"
+          # The partner feed job pushes to this same branch; if it lands first, a plain push here is
+          # rejected (non-fast-forward) and the step FAILS — silently leaving customers on the old
+          # feed while the installers are already published. Rebase onto whatever landed, then push.
+          git pull --rebase origin main
           git push
