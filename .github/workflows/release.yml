@@ -71,3 +71,40 @@ jobs:
           releaseDraft: false
           prerelease: false
           includeUpdaterJson: true
+
+  # After both installers are published, copy the release's completed latest.json to a STABLE file
+  # on main — sender-latest.json — exactly as the partner workflow does for partner-latest.json.
+  # The app reads that fixed file instead of GitHub's "latest release" redirect, which is briefly
+  # unreliable in the minutes right after a release (that window showed "Couldn't check for updates
+  # right now"). One fixed file = no flakiness, and the customer feed can never be disturbed by a
+  # partner release.
+  feed:
+    needs: release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout this public repo (to commit the feed)
+        uses: actions/checkout@v4
+
+      - name: Checkout private source (to read the version)
+        uses: actions/checkout@v4
+        with:
+          repository: cyberentic/Printnel
+          ssh-key: ${{ secrets.SOURCE_DEPLOY_KEY }}
+          path: source
+
+      - name: Publish stable sender update feed
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ver=$(node -p "require('./source/sender/src-tauri/tauri.conf.json').version")
+          tag="sender-v${ver}"
+          url=$(gh api "repos/${{ github.repository }}/releases/tags/${tag}" \
+                --jq '.assets[] | select(.name=="latest.json") | .url')
+          curl -sL -H "Authorization: token ${GH_TOKEN}" -H "Accept: application/octet-stream" \
+               "$url" -o sender-latest.json
+          git config user.name "printnel-release-bot"
+          git config user.email "release@users.noreply.github.com"
+          git add sender-latest.json
+          git commit -m "sender update feed (${ver})" || echo "no change"
+          git push
