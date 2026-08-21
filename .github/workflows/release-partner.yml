@@ -88,4 +88,8 @@ jobs:
           git config user.email "release@users.noreply.github.com"
           git add partner-latest.json
           git commit -m "partner update feed ($(node -p "require('./source/partner/src-tauri/tauri.conf.json').version"))" || echo "no change"
+          # The sender feed job pushes to this same branch; if it lands first, a plain push here is
+          # rejected (non-fast-forward) and the step FAILS — silently leaving shops on the old feed
+          # while the installer is already published. Rebase onto whatever landed, then push.
+          git pull --rebase origin main
           git push
