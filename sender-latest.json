@@ -1,27 +1,27 @@
 {
-  "version": "0.7.13",
+  "version": "0.7.14",
   "notes": "Your app will offer this update automatically on next launch.",
-  "pub_date": "2026-08-22T03:01:09.345Z",
+  "pub_date": "2026-08-22T14:13:01.265Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRYjZkZU44QUxJcDcvZEw5WHYxNlV0RmtoTzJKRTNzNHRBVStIcW40Z1IzV2thcGYrQWZndnlQWUtHaTJabWRNZFZTSUVrS09FRGlVTUp4SFVCK3RXVEM1cFJKRFd3MXdnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3MzY3NTgxCWZpbGU6UHJpbnRuZWwuYXBwLnRhci5negpsL3NMN0cySE8waE4vdkQvRUx3cVJRTVl6LytJT2l6QXdMMW02Tk5yM0hLbG1aL1JDWTEvcjVWV2ZGTStSWmhNRGJEVXVVWDQwcTVOeE1hUnpqcFZDQT09Cg==",
-      "url": "https://github.com/cyberentic/printnel-releases/releases/download/sender-v0.7.13/Printnel_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRYjZkZU44QUxJcDhLOFpDb0cvN20vR29vYmNnYUtDWllpUVZuZTYvSDMzZ3ZQSVNabXlFUE9TaXlzZThHUTBEdHJRdjlSNWJKRGZ1MVF6UzlLQ21YdFBGaXFTVWJiWVFjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3NDA3ODY3CWZpbGU6UHJpbnRuZWwuYXBwLnRhci5negpockJwWHEzVWhwRXVhbE1JVkwvcURSVTc4S3U2RVJmeWxNc0wrdWpFTVd2Nncyb2E4MVh5MFYrSFEyR0d2TGZzYnR1YXBLUTc2OGhiK1k0TmxXTmNEZz09Cg==",
+      "url": "https://github.com/cyberentic/printnel-releases/releases/download/sender-v0.7.14/Printnel_aarch64.app.tar.gz"
     },
     "darwin-aarch64-app": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRYjZkZU44QUxJcDcvZEw5WHYxNlV0RmtoTzJKRTNzNHRBVStIcW40Z1IzV2thcGYrQWZndnlQWUtHaTJabWRNZFZTSUVrS09FRGlVTUp4SFVCK3RXVEM1cFJKRFd3MXdnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3MzY3NTgxCWZpbGU6UHJpbnRuZWwuYXBwLnRhci5negpsL3NMN0cySE8waE4vdkQvRUx3cVJRTVl6LytJT2l6QXdMMW02Tk5yM0hLbG1aL1JDWTEvcjVWV2ZGTStSWmhNRGJEVXVVWDQwcTVOeE1hUnpqcFZDQT09Cg==",
-      "url": "https://github.com/cyberentic/printnel-releases/releases/download/sender-v0.7.13/Printnel_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRYjZkZU44QUxJcDhLOFpDb0cvN20vR29vYmNnYUtDWllpUVZuZTYvSDMzZ3ZQSVNabXlFUE9TaXlzZThHUTBEdHJRdjlSNWJKRGZ1MVF6UzlLQ21YdFBGaXFTVWJiWVFjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3NDA3ODY3CWZpbGU6UHJpbnRuZWwuYXBwLnRhci5negpockJwWHEzVWhwRXVhbE1JVkwvcURSVTc4S3U2RVJmeWxNc0wrdWpFTVd2Nncyb2E4MVh5MFYrSFEyR0d2TGZzYnR1YXBLUTc2OGhiK1k0TmxXTmNEZz09Cg==",
+      "url": "https://github.com/cyberentic/printnel-releases/releases/download/sender-v0.7.14/Printnel_aarch64.app.tar.gz"
     },
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRYjZkZU44QUxJcC9PVS9FVEdHWlI4VjBVbzE5ZWdYeVBxSWlueFhCL0ZXVGVmOFJ3NzFISXppWmxpQzQxWkZBbUFtWEpJZ0h1SDkxSzZaU1BYeit4NDRrVFcwSTgvMVFJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3MzY3NjY2CWZpbGU6UHJpbnRuZWxfMC43LjEzX3g2NF9lbi1VUy5tc2kKRmJ2TmMyc2VMaURkUFdZU00reEFvQm5BWlk1NmM1ZlZ5dVdDMytEWVZlc0tKUXNXVnIyQ0owZUU0Zi9MVjBFVzhxR0NMOWhmTEF4cVNuSFRqMFV3RGc9PQo=",
-      "url": "https://github.com/cyberentic/printnel-releases/releases/download/sender-v0.7.13/Printnel_0.7.13_x64_en-US.msi"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRYjZkZU44QUxJcHpFZFpXYWZjRzl1LzVJeWF4d25aZURGOUZvTFpIUllIZGEraUFGY2lNTW93RHZDNUVLOEFRbVkvQU9YUFFoVGJpNHpKY3lxNTNIeExEcUhyQVZMS2dBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3NDA3OTc4CWZpbGU6UHJpbnRuZWxfMC43LjE0X3g2NF9lbi1VUy5tc2kKSlJFNVA1NHE5ZkYySFF5UmloTk42THlNMjZlb2hPYlh6ODl0aHFacFFOWDYrWkIvQmsvMWlVSjc0QXdFNnpQY3B1bDZwczAvdjgrdzZVQk4xOGk5QVE9PQo=",
+      "url": "https://github.com/cyberentic/printnel-releases/releases/download/sender-v0.7.14/Printnel_0.7.14_x64_en-US.msi"
     },
     "windows-x86_64-msi": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRYjZkZU44QUxJcC9PVS9FVEdHWlI4VjBVbzE5ZWdYeVBxSWlueFhCL0ZXVGVmOFJ3NzFISXppWmxpQzQxWkZBbUFtWEpJZ0h1SDkxSzZaU1BYeit4NDRrVFcwSTgvMVFJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3MzY3NjY2CWZpbGU6UHJpbnRuZWxfMC43LjEzX3g2NF9lbi1VUy5tc2kKRmJ2TmMyc2VMaURkUFdZU00reEFvQm5BWlk1NmM1ZlZ5dVdDMytEWVZlc0tKUXNXVnIyQ0owZUU0Zi9MVjBFVzhxR0NMOWhmTEF4cVNuSFRqMFV3RGc9PQo=",
-      "url": "https://github.com/cyberentic/printnel-releases/releases/download/sender-v0.7.13/Printnel_0.7.13_x64_en-US.msi"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRYjZkZU44QUxJcHpFZFpXYWZjRzl1LzVJeWF4d25aZURGOUZvTFpIUllIZGEraUFGY2lNTW93RHZDNUVLOEFRbVkvQU9YUFFoVGJpNHpKY3lxNTNIeExEcUhyQVZMS2dBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3NDA3OTc4CWZpbGU6UHJpbnRuZWxfMC43LjE0X3g2NF9lbi1VUy5tc2kKSlJFNVA1NHE5ZkYySFF5UmloTk42THlNMjZlb2hPYlh6ODl0aHFacFFOWDYrWkIvQmsvMWlVSjc0QXdFNnpQY3B1bDZwczAvdjgrdzZVQk4xOGk5QVE9PQo=",
+      "url": "https://github.com/cyberentic/printnel-releases/releases/download/sender-v0.7.14/Printnel_0.7.14_x64_en-US.msi"
     },
     "windows-x86_64-nsis": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRYjZkZU44QUxJcDBpbDRDRTBZNDc4b0ZWekxKU0tNSXJ6ZjJpMWFPZWgwcy9xams5ejREaXlFL0UzU0h2QUsxWU9YSmJheWdmR09rSDZ5SVh5MXVaQmxDbHZ3ck5oY1FNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3MzY3NjY2CWZpbGU6UHJpbnRuZWxfMC43LjEzX3g2NC1zZXR1cC5leGUKZDZFR3lIa3VBaEN6TGRnKy8zcTR5R0lCM21BbHR0QStmb1Z5dmFsZkFZazZyeW1mb2lkYnVPWDQ0ZFpiQ2MwUjMxQXV6QTZRTWs5U0JFZTJVd2E1QVE9PQo=",
-      "url": "https://github.com/cyberentic/printnel-releases/releases/download/sender-v0.7.13/Printnel_0.7.13_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRYjZkZU44QUxJcHpoeEJNZkdkNUptWG1RL000Y3Q1SGsxU3AyWS9pTE4xRzBvZnRsbUViK29Nckx4RGR6TStiZ3BCaGRjS3A3dHdLZmtsMFAvMlppajg4ZDh0eVJOZndRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3NDA3OTc4CWZpbGU6UHJpbnRuZWxfMC43LjE0X3g2NC1zZXR1cC5leGUKenlxaFhwZkp3OHJKWE53Sjd0aFZmK0xKV0dvVWdoRjNnd2lGdDZ6a1A1ZTh6bXJiaHNnZG56amlKMFlSdFBMdTNFblF3YUh4ZmE0Y01FcVN1UFBLQWc9PQo=",
+      "url": "https://github.com/cyberentic/printnel-releases/releases/download/sender-v0.7.14/Printnel_0.7.14_x64-setup.exe"
     }
   }
 }
